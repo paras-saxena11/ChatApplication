@@ -15,12 +15,13 @@ require('./connection');
 
 const server = require('http').createServer(app);
 const PORT = 5001;
-const io = require('socket.io')(server, {
-    cors: {
-        origin: 'http://localhost:3000',
-        method: ['GET', 'POST']
-    }
-})
+const io = require("socket.io")(server, {
+  cors: {
+    origin: "*",
+    // origin: 'http://localhost:3000',
+    method: ["GET", "POST"],
+  },
+});
 
 async function getLastMessagesFromRoom(room) {
     let roomMessages = await Message.aggregate([
