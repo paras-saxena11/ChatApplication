@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const User = require('./Models/User');
-const rooms = ["General", "Tech", "Finance", "Crypto"];
+const rooms = ['general', 'tech', 'finance', 'crypto'];
 const cors = require('cors');
 const UserRoutes = require('./Routes/UserRoutes');
 const Message = require('./Models/Message');
