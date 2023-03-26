@@ -67,6 +67,13 @@ function MessageForm() {
                   src={privateMemberMsg.picture}
                   alt=""
                   className="conversation-profile-picture"
+                  style={{
+                            width: 35,
+                            height: 35,
+                            objectFit: "cover",
+                            borderRadius: "50%",
+                            marginRight: 10,
+                          }}
                 />
               </div>
             </div>
