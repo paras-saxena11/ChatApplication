@@ -36,7 +36,7 @@ function Sidebar() {
         socket.emit("join-room", "general");
         socket.emit("new-user");
       }
-    });
+    }, [socket]);
 
     socket.off("new-user").on("new-user", (payload) => {
       setMembers(payload);
